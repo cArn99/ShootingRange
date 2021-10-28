@@ -31,14 +31,16 @@ public class MouseLook : MonoBehaviour
     {
         if(Time.deltaTime==0f)
         {
+            Cursor.lockState = CursorLockMode.None;
             return;
         }
 
+        Cursor.lockState = CursorLockMode.Locked;
         if (Input.GetKeyDown(KeyCode.Return))
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = !Cursor.visible;
-            //Debug.Log("Working");
+            Debug.Log("Working");
         }
         if (axes == RotationAxes.MouseX)
         {

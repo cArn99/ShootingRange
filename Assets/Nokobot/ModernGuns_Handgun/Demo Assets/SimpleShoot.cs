@@ -24,6 +24,10 @@ public class SimpleShoot : MonoBehaviour
 
     void Update()
     {
+        if(Time.deltaTime==0f)
+        {
+            return;
+        }
         if (Input.GetButtonDown("Fire1"))
         {
             GetComponent<Animator>().SetTrigger("Fire");
